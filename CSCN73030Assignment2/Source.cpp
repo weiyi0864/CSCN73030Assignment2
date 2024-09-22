@@ -40,11 +40,13 @@ int main() {
     // Close the file
     file.close();
 
-    // Print the student information stored in the vector
-    std::cout << "List of students:" << std::endl;
+#ifdef _DEBUG
+    // Debug mode: print all student information
+    std::cout << "DEBUG MODE: List of students:" << std::endl;
     for (const auto& student : students) {
         std::cout << "Name: " << student.firstName << " " << student.lastName << std::endl;
     }
+#endif
 
     return 0;
 }
